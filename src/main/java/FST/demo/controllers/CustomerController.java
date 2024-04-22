@@ -20,11 +20,11 @@ public class CustomerController {
 	@RequestMapping("afficher")
 	public String afficher(Model model) {
 		
-		String name = "Aymen";
-		String prname = "is the Owner";
+		//String name = "Aymen";
+		//String prname = "is the Owner";
 		
-		model.addAttribute("nom",name);		
-		model.addAttribute("surname",prname);
+		//model.addAttribute("nom",name);		
+		//model.addAttribute("surname",prname);
 		
 		//afficher les elements de la liste
 		model.addAttribute("produits", products);
@@ -61,6 +61,7 @@ public class CustomerController {
 		for(Product p : products) {
 			if(id==p.getId()) {
 				products.remove(p);
+				id--;
 				break;
 			}
 		}
